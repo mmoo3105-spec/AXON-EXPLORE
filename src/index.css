@@ -1,0 +1,44 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-primary: #0f172a; /* slate-900 */
+  --color-secondary: #3b82f6; /* blue-500 */
+  --color-accent: #60a5fa; /* blue-400 */
+  --color-bg-light: #f8fafc; /* slate-50 */
+  --color-surface: #ffffff;
+  --color-border: #e2e8f0; /* slate-200 */
+  --color-text-main: #0f172a;
+  --color-text-muted: #64748b; /* slate-500 */
+}
+
+@layer base {
+  body {
+    @apply bg-bg-light text-text-main font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-bold tracking-tight;
+  }
+
+  /* Focus on geometric borders rather than heavy roundness */
+  .geometric-card {
+    @apply bg-white border border-border shadow-sm hover:border-accent transition-colors;
+  }
+
+  .label-mono {
+    @apply font-mono text-[10px] uppercase tracking-widest text-text-muted;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
